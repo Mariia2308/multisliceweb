@@ -1,0 +1,57 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+Multisite
+{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>{{ title }}</h1>
+    <h1>Welcome to the Main Page</h1>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <label for="size">Grid Size:</label>
+        <input type="number" id="size" name="size"><br><br>
+
+        <label for="wavelength">Wavelength:</label>
+        <input type="number" id="wavelength" name="wavelength"><br><br>
+
+        <label for="phase">Phase:</label>
+        <input type="number" id="phase" name="phase"><br><br>
+
+        <label for="potential_type">Potential Type:</label>
+        <select id="potential_type" name="potential_type">
+            <option value="real">Real</option>
+            <option value="imaginary">Imaginary</option>
+        </select><br><br>
+
+        <label for="absorption">Absorption:</label>
+        <input type="number" id="absorption" name="absorption"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Diffraction Grating Information:</h2>
+    <ul>
+        {% for grating in diffraction_gratings %}
+        <li>Size: {{ grating.size }}, Absorption: {{ grating.absorption }}, etc...</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Multislice Results:</h2>
+    <ul>
+        {% for result in multislice_results %}
+        <li>Result: {{ result.result }}, etc...</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Plane Wave Information:</h2>
+    <ul>
+        {% for wave in plane_waves %}
+        <li>Size: {{ wave.size }}, Wavelength: {{ wave.wavelength }}, etc...</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

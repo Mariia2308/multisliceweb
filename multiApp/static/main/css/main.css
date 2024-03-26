@@ -1,0 +1,98 @@
+body {
+    background: #2c2c2c;
+    display: flex;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+
+}
+
+aside {
+    float: left;
+    background: wheat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5%;
+    height: 100vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+}
+
+aside img {
+    width: 220px;
+    float: left;
+}
+
+aside .logo {
+    color: cadetblue;
+    font-size: 44px;
+    margin-top:20px;
+    font-weight: bold;
+    position: relative;
+    top: -5px;
+}
+
+aside h3 {
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: saddlebrown;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+
+    display: block;
+    position: relative;
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    transition: transform .6s ease;
+}
+
+aside ul li a{
+    text-decoration: none;
+    color: cadetblue;
+}
+aside ul li:hover, aside ul li a:hover {
+    color: saddlebrown;
+
+    transform: scale(1.1);
+}
+
+main .features{
+    float: left;
+    color: #fff;
+    margin-top: 100px;
+    text-align: center;
+    width: 75%;
+}
+
+main .features h1{
+    font-size: 50px;
+}
+
+main .features p{
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.slicerdatai{
+    background-color: aqua;
+    float: left;
+    clear: both;
+    width: 400px;
+    margin: 20px 34%;
+    text-align: left;
+
+}
